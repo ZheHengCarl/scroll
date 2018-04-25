@@ -1,0 +1,85 @@
+body,p,dd,h1,h2,h3,h4,b{ margin:0; font-weight:normal;}
+dl { margin:0;}
+ul{ list-style:none; margin:0; padding:0;}
+ol{ list-style:none; margin:0; padding:0;}
+img{ border:none;}
+/*b { font-weight:normal;}*/
+*{-webkit-tap-highlight-color:transparent;}
+a{ text-decoration:none; }
+input,select{border:none; outline:medium; -webkit-appearance:none;}
+i,em,s{ font-style:normal; text-decoration:none;}
+li { -webkit-tap-highlight-color:transparent;}
+/* 特殊作用 */
+.ClearFix:after{ display:block; content:""; clear:both;}
+dl:after { display:block; content:""; clear:both;}
+@font-face{
+    src: url('../fonts/syht.otf');
+    font-family: "syht";
+}
+#loading{
+    background-color:transparent;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    margin-top: 0px;
+    top: 0px;
+}
+
+#loading-center-absolute {
+    position: absolute;
+    left: 50%;
+    bottom: .25rem;
+    height: .2rem;
+    width: 1rem;
+    margin-left: -.5rem;
+
+}
+.object{
+    width: .2rem;
+    height: .2rem;
+    background-color: #dedede;
+    -moz-border-radius: 50% 50% 50% 50%;
+    -webkit-border-radius: 50% 50% 50% 50%;
+    border-radius: 50% 50% 50% 50%;
+    margin-right: .2rem;
+    margin-bottom: .2rem;
+    position: absolute;	
+}
+#object_one{
+    -webkit-animation: object 2s linear infinite;
+     animation: object 2s linear infinite;
+     }
+#object_two{ 
+    -webkit-animation: object 2s linear infinite -.4s;
+    animation: object 2s linear infinite -.4s;
+     }
+#object_three{ 
+    -webkit-animation: object 2s linear infinite -.8s; 
+    animation: object 2s linear infinite -.8s; 
+    }
+#object_four{ 
+    -webkit-animation: object 2s linear infinite -1.2s;
+    animation: object 2s linear infinite -1.2s; 
+    } 
+#object_five{ 
+    -webkit-animation: object 2s linear infinite -1.6s; 
+    animation: object 2s linear infinite -1.6s; 
+    }
+@-webkit-keyframes object{
+  0% { left: 1rem; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -.2rem; width: .2rem; height: .2rem;}
+  90% { width: .4rem; height: .15rem; }
+  95% { left: 1rem; top: -2rem; width: .2rem; height: .2rem;}
+  100% { left: 1rem; top:0; }		
+    
+}		
+@keyframes object{
+  0% { left: 1rem; top:0}
+  80% { left: 0; top:0;}
+  85% { left: 0; top: -.2rem; width: .2rem; height: .2rem;}
+  90% { width: .4rem; height: 15px; }
+  95% { left: 1rem; top: -.2rem; width: .2rem; height: .2rem;}
+  100% { left: 1rem; top:0; }
+}	

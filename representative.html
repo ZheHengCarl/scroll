@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0,minimum-scale=1.0, initial-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/com.css">
+    <script src="js/size.js"></script>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <title>列表</title>
+</head>
+
+<body>
+        <form id="myform" action="" onsubmit="return false;">
+    <div class="wrap representative bg3">
+        <div class="menuCont">
+            <ul class="new-menu">
+                <li><a href="#" class="cur">查询</a></li>
+                <li><a href="#" >申请</a></li>
+            </ul>
+            <div class="searchCont">
+                
+                    <input type="search" id="myinput"/>
+               
+            </div>
+            <div class="screening">
+                <h2>
+                    <span>状态 <i></i></span>
+                    <span>时间</span>
+                    <span>疾病种类</span>
+                </h2>
+                <ul class="state slidCont">
+                    <li><span>已采样</span><i></i></li>
+                    <li><span>样本审批中</span><i></i></li>
+                    <li><span>检查中</span><i></i></li>
+                    <li><span>样本出现异常</span><i></i></li>
+                    <li><span>报告审批中</span><i></i></li>
+                    <li><span>已出报告</span><i></i></li>
+                </ul>
+                <ul class="time slidCont">
+                    <li><span>正序</span><i></i></li>
+                    <li><span>倒序</span><i></i></li>
+                </ul>
+                <ul class="class slidCont">
+                    <li><span>肠癌</span><i></i></li>
+                    <li><span>泛癌种</span><i></i></li>
+                    <li><span>肺癌</span><i></i></li>
+                    <li><span>卵巢</span><i></i></li>
+                    <li><span>乳腺癌</span><i></i></li>
+                    <li><span>肿瘤</span><i></i></li>
+                </ul>
+            </div>
+        </div>
+        <ul class="list-cont"></ul>
+        <div class="cover"></div>
+
+    </div>
+</form>
+    <script>
+        var loadStr = "<div id='loading'><div id='loading-center'><div id='loading-center-absolute'><div class='object' id='object_one'></div><div class='object' id='object_two' style='left:20px;'></div><div class='object' id='object_three' style='left:40px;'></div><div class='object' id='object_four' style='left:60px;'></div><div class='object' id='object_five' style='left:80px;'></div></div></div></div>";
+        $(".screening span").click(function(){
+            var _index = $(this).index();
+            var _this = $(this);
+            $(".slidCont").hide();
+            $(".cover").show();
+            $(".slidCont").eq(_index).show();
+        });
+        $(".slidCont li").click(function(){
+            var _index = $(this).parent().index();
+            var _actText = $(this).text();
+            $(".cover").hide();
+            $(".screening span").eq(_index-1).text(_actText).addClass("active");
+            
+            $(this).addClass("active").siblings().removeClass("active").parent().hide();
+        });
+        var winH = window.innerHeight;
+        var newMenu = $(".new-menu").css("margin-top");
+        newMenu = parseInt(newMenu.substring(0,newMenu.length-2));
+        var menuCont = $(".menuCont").height();
+        var listContM = $(".list-cont").css("margin-top");
+        listContM = parseInt(listContM.substring(0,listContM.length-2));
+        $(".list-cont").css({
+            "top": newMenu+menuCont,
+            "height": winH-newMenu-menuCont-listContM-30,
+        });
+
+        for (var i = 0; i < 10; i++) {
+            var str = "<li><a href='#'><h3>标题"+i+"</h3><label>时间"+i+"</label><i>已提交</i></a></li>";
+            $(".list-cont").append(str);
+        };
+
+        var isScroll = true;
+        var _newHeight = $(".list-cont").height();
+        $(".list-cont").scroll(function () {
+            var scrollTop = $(this).scrollTop();
+            var scrollH = $(this).prop("scrollHeight");
+            var listContH = $(this).height();
+            // console.log(scrollTop+listContH,scrollH)
+            if (scrollTop + listContH >= scrollH) {
+                $(".wrap").append("");
+                $("#loading").show();
+                if(isScroll){
+                    isScroll=false;
+                    $(".wrap").append(loadStr);
+
+                    setTimeout(function(){
+                        for (var i = 0; i < 10; i++) {
+                            var str = "<li><a href='#'><h3>标题"+i+"</h3><label>时间"+i+"</label><i>已提交</i></a></li>";
+                            $(".list-cont").append(str);
+                        };
+                        $("#loading").remove();
+                        isScroll=true;
+                    },1000);
+                }
+            };
+        });
+
+        var overscroll = function(el) {
+            el.addEventListener('touchstart', function() {
+                var top = el.scrollTop
+                ,totalScroll = el.scrollHeight
+                ,currentScroll = top + el.offsetHeight;
+                if(top === 0) {
+                    el.scrollTop = 1;
+                }else if(currentScroll === totalScroll) {
+                    el.scrollTop = top - 1;
+                }
+            });
+
+            el.addEventListener('touchmove', function(evt) {
+            if(el.offsetHeight < el.scrollHeight)
+                evt._isScroller = true;
+            });
+        };
+        overscroll(document.querySelector('.list-cont'));
+        document.body.addEventListener('touchmove', function(evt) {
+            if(!evt._isScroller) {
+                evt.preventDefault();
+            }
+        });
+    </script>
+</body>
+
+</html>

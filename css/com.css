@@ -1,0 +1,191 @@
+html { width: 100%; height: 100%; }
+.wrap {  width: 100%; height: 100%; overflow: hidden; -webkit-overflow-scrolling: touch;}
+
+
+.bg1 { position: fixed; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; background: url("../img/point2.png") no-repeat 0 0/100% auto; }
+.bg2 { position: fixed; top: 0; bottom: 0; left: 0; width: 100%; height: 100%; background: url("../img/line3.png") no-repeat 0 0/100% auto; }
+.bg3 { background: url("../img/formBg.jpg") no-repeat 0 0/100% 100%; }
+.backIndex { position: absolute; left: .17rem; top: .1rem; width: 0.65rem; height: 0.65rem; background: url("../img/icon-login.png") no-repeat 0 0/cover; }
+.form .content .textCont li .specialRadio3 label { display: inline-block; margin: 0; }
+.form .content .textCont li .specialRadio3 label i { margin-right: 0; }
+.form .content .textCont li .specialRadio3 div { display: inline-block; margin: 0 10px 0 0; }
+.form .content .textCont li .specialRadio5 label { display: inline-block; margin: 0; }
+.form .content .textCont li .specialRadio5 label i { margin-right: 0; }
+.form .content .textCont li .specialRadio5 div { display: inline-block; margin: 0 10px 0 0; }
+.form .content .textCont div.dynamicList input[type='text']{ position: inherit; width: 1rem; opacity: 1; margin: 0 5px; text-align: center; }
+.form .content .textCont div.dynamicList span { display: inline-block; width: 3.7rem; }
+.type1, .type2, .type3 { display: none; }
+.onlyRadio input[type='text']{ position: initial !important; opacity: 1 !important;}
+
+/* 申请表单 */
+.form {  position: relative;}
+.form::before { position: fixed; top: 0; left: 0; width: 100%; height: 100%; content: "";  background: url("../img/formBg.jpg") no-repeat center center; will-change: transform; background-size: cover; z-index: -1; }
+.form .content { margin-top: 2.1rem; }
+.form .content .menu { padding: 0 20%; background-color: #FFF; line-height: .6rem; color: #036eb8; box-shadow: 0 1px 15px 1px #ebeae8; }
+.form .content .menu li { position: relative; float: left; width: 50%; height: .6rem; font-size: .24rem; text-align: center; }
+.form .content .menu li span { display: inline-block; width: 50%; height: .5rem; opacity: .5; }
+.form .content .menu li.active { font-size: .27rem; font-weight: bold; }
+.form .content .menu li.active span { border-bottom: .03rem solid #036eb8; opacity: 1; }
+.form .content .formCont { width: 85%; padding: 5%; margin: 0 auto; background-color: #FFF; border-radius:.1rem; }
+.form .content .formCont div { font-size: .22rem; margin: .3rem 0; color: #484848;}
+.form .content .formCont span { display: inline-block; min-width: 1.7rem; font-size: .22rem; color: #484848;}
+.form .content .formCont input { width: 4.2rem; height: .5rem; border:1px solid #66c2c0; box-shadow: 1px 1px  10px #d1cfcf inset; border-radius: .1rem}
+
+.form .content .textCont { width: 100%; margin: 0 auto; border-radius:.1rem; }
+.form .content .textCont li { position: relative; width: 90%; /*height: .24rem; */padding: 5% 2.5%; margin: .35rem auto; overflow: hidden; background-color: #FFF; border-radius:.1rem; box-shadow: 2px 0 15px #e8e7e6;}
+
+.form .content .textCont div { position: relative; font-size: .22rem; margin: .3rem 0; color: #484848;}
+.form .content .textCont .time { display: none; }
+/*.form .content .textCont div.timeShow { display: block; }*/
+.form .content .textCont span { display: inline-block; min-width: 1.2rem; font-size: .22rem; color: #484848;}
+.form .content .textCont input[type='text'],.form .content .textCont input[type='email'],.form .content .textCont input[type='tel'],.form .content .textCont input[type='password'],.form .content .textCont input[type='date']{ width: 4.58rem; height: .5rem; border:1px solid #66c2c0; box-shadow: 1px 1px 10px #d1cfcf inset; border-radius: .1rem}
+.form .content .textCont li .slideIcon { position: absolute; right: .13rem; bottom: .13rem; width: .18rem; height: .21rem; background: url("../img/slideIcon.png") no-repeat 0 0/cover; }
+.form .content .textCont li h2 { margin-top:-.025rem; font-size: .28rem; color: #009996; font-weight: bold; }
+.form .content .textCont li h2 i { margin-right: .3rem;}
+.form .content .textCont li h2 span { position: relative; min-width: initial; font-size: .22rem; font-weight: normal; color: #484848;}
+.form .content .textCont li h2 span em { position: absolute; bottom: .05rem; left: 50%;  width: .18rem; height: .08rem; margin-left: -.09rem; background: url(../img/icon-triangle.png) no-repeat 0 0 / cover; }
+.form .content .textCont li label { position: relative; display: block;  margin:.25rem 0;  font-size: .22rem; color: #484848;}
+.form .content .textCont li label input { position: absolute; left: 0; top: 0; opacity: 0; }
+.form .content .textCont li label input:checked+i { background: url('../img/checkedYes.png') no-repeat 0 0 / cover;}
+.form .content .textCont li label i { display: inline-block; width: .3rem; height: .3rem; margin-right: .3rem; background: url('../img/checkedNo.png') no-repeat 0 0 / cover; vertical-align: -3px;}
+/* list1 */
+.form .content .textCont li:nth-child(1) h2 i img{ width: .35rem; height: .31rem; vertical-align:-3px;}
+/* list2 */
+.form .content .textCont li:nth-child(2) h2 i img{ width: .27rem; height: .27rem; vertical-align:-2px;}
+.form .content .textCont li:nth-child(2) div:nth-of-type(1) { padding: 0; text-align: center;}
+.form .content .textCont li:nth-child(2) label { display: inline-block; margin: 0 .5rem;}
+.form .content .textCont li:nth-child(2) label input { width: .3rem; height: .3rem;}
+/* list3 */
+.form .content .textCont li:nth-child(3) h2 i img{ width: .33rem; height: .24rem; vertical-align:-1px;}
+.form .content .textCont li:nth-child(3) select{  border:1px solid #66c2c0; box-shadow: 1px 1px #d1cfcf 10px; border-radius: .1rem  }
+.form .content .textCont li:nth-child(3) select:nth-of-type(1) { width: 1.38rem; height: .5rem; margin-left: -.08rem; padding-left: .38rem; }
+.form .content .textCont li:nth-child(3) select:nth-of-type(2) { width: .48rem; height: .5rem; padding-left: .1rem;}
+.form .content .textCont li:nth-child(3) select:nth-of-type(3) { width: .48rem; height: .5rem; padding-left: .1rem;}
+.form .content .textCont li:nth-child(3) .sex label{ display: inline-block; margin: 0 0.25rem; }
+.form .content .textCont li:nth-child(3) .sex label input { width: .3rem; height: .3rem;}
+.form .content .textCont li:nth-child(3) .smoking label { display: inline-block; margin: 0 0.25rem; }
+.form .content .textCont li:nth-child(3) .smoking label input { width: .3rem; height: .3rem;}
+.form .content .textCont li:nth-child(3) .installment label { display: inline-block; margin: 0 .14rem;}
+.form .content .textCont li:nth-child(3) .installment label i { margin-right: .05rem;}
+.form .content .textCont li:nth-child(3) .installment label input { width: .3rem; height: .3rem;}
+/* list4 */
+.form .content .textCont li:nth-child(4) h2 i img{ width: .23rem; height: .32rem; vertical-align:-2px;}
+.form .content .textCont li:nth-child(4) .medicaList { display:none; float: right; margin: 0; width: 4.8rem;  padding: .25rem; border:1px solid #6ec5c3; border-radius: .1rem; box-shadow: 1px 1px  10px #d1cfcf inset; }
+.form .content .textCont li:nth-child(4) .medicaList p { position: relative; margin: .15rem 0; }
+.form .content .textCont li:nth-child(4) .medicaList input[type='checkbox'] { position: absolute; left: 0; top: 0; opacity: 0; width: .34rem; height: .34rem; border-radius: initial; background: none; border:none; box-shadow: none;}
+.form .content .textCont li:nth-child(4) .medicaList input[type='text'] { display:none; opacity: 1; position: initial; width: 2rem; margin-left: .15rem; text-align: center;}
+.form .content .textCont li:nth-child(4) select{  border:1px solid #66c2c0; box-shadow: 1px 1px 10px #d1cfcf inset; border-radius: .1rem  }
+.form .content .textCont li:nth-child(4) select:nth-of-type(1) { width: 1.38rem; height: .5rem; margin-left: -.08rem; padding-left: .38rem; }
+.form .content .textCont li:nth-child(4) select:nth-of-type(2) { width: .48rem; height: .5rem; padding-left: .1rem;}
+.form .content .textCont li:nth-child(4) .Drug label { display: inline-block; margin: 0 .1rem;}
+.form .content .textCont li:nth-child(4) .Drug label i { margin-right: .05rem;}
+.form .content .textCont li:nth-child(4) .Drug label input { width: .3rem; height: .3rem;}
+/* list5 */
+.form .content .textCont li:nth-child(5) h2 i img{ width: .26rem; height: .28rem; vertical-align:-2px;}
+.form .content .textCont li:nth-child(5) .upLoadImg { display: inline-block; width: 1.3rem; height: .5rem; margin:0; background-color: #44b4b2; border-radius: 5px; color: #FFF; text-align: center; line-height: .5rem; font-size: .22rem;}
+.form .content .textCont li:nth-child(5) .upLoadImg input[type='file'] { position: absolute; left: 0; top: 0; opacity: 0; }
+.form .content .textCont li:nth-child(5) .special { display: none;}
+.form .content .textCont li:nth-child(5) .special .specialRadio2 label { display: inline-block; margin: 0 .14rem;}
+.form .content .textCont li:nth-child(5) .special .specialRadio2 label i { margin-right: .05rem;}
+.form .content .textCont li:nth-child(5) .special .specialRadio2 label input { width: .3rem; height: .3rem;}
+/* list6 */
+.form .content .textCont li:nth-child(6) h2 i img{ width: .26rem; height: .31rem; vertical-align:-2px;}
+/* list7 */
+.form .content .textCont .btnCont { width: 1.4rem; height: auto; margin: 0 auto .15rem; background: none; box-shadow: none; padding: 0;}
+.form .content .textCont .btnCont input { width: 1.4rem; height: .48rem; background-color: #009794; border-radius: .1rem; text-align: center; padding: 0; border:none; box-shadow: 1px 1px 2px 1px #FFF ; line-height: .48rem; color: #FFF; font-size: .26rem; font-weight: bold;}
+.form .content .textCont .btnCont .subBtn { float: left; }
+.form .content .textCont .btnCont .stagBtn { float: right;}
+/* login */
+.login .top { width: 100%; height: 2.32rem; margin-bottom: .95rem; background: url('../img/login-top.jpg') no-repeat 0 0 / cover;}
+.loginCont ul { width: 80%; margin:  0 auto;}
+.loginCont ul li { height: .43rem; padding: .34rem 5%; border-bottom: 1px solid #d2d2d9;}
+.loginCont ul li i { position: relative; float: left; width: .34rem; height: .4rem; margin-right: .45rem; background: url('../img/login-Icon.png') no-repeat 0 0 / cover; }
+.loginCont ul li i:after {position: absolute; top: 0; right:-.2rem; display: inline-block; content: ""; width: 1px; height: 100%; background:#999;}
+.loginCont ul li:nth-child(1) i { background-position-y: .03rem;}
+.loginCont ul li:nth-child(2) i { background-position-y: -1rem;}
+.loginCont ul li:nth-child(3) i { background-position-y: -2.18rem;}
+.loginCont ul li input { float: left; margin-top: .035rem; width: 80%; font-size: .25rem;}
+.loginCont ul li input::placeholder { font-size: .25rem; color: #999999; font-family: 'Hiragino Sans GB',Arial, Helvetica, sans-serif;}
+.loginCont .login-btn { display: block; width: 6.25rem; height: 0.81rem; margin: 2rem auto 0; background-image: linear-gradient(0deg, #1493ff 0%, #30c7ff 100%); box-shadow: 0rem 0.14rem 0.24rem 0rem rgba(81, 160, 221, 0.35); border-radius: 0.12rem; font-size: .3rem; color: #FFF; font-family: 'Hiragino Sans GB',Arial, Helvetica, sans-serif; }
+/* formList */
+.formList { font-family: syht ,Arial, Helvetica, sans-serif;}
+.new-menu { display: flex; width: 100%; margin: 2.4rem 0 .25rem; background-color: #FFF; line-height: .5rem; color: #036eb8; box-shadow: 0 1px .15rem 1px #ebeae8; }
+.new-menu li { flex: 1; text-align: center; padding-bottom: .1rem;}
+.new-menu li a { opacity: .5; display: inline-block; width: 1.11rem; font-weight: bold; font-size: .24rem; color: #036eb8; vertical-align: middle; border-bottom: .03rem solid #FFF; }
+.new-menu li a.cur { opacity: 1;  border-bottom: .03rem solid #036eb8; }
+.formList .list { width: 90%; margin: 0 auto; overflow: auto; -webkit-overflow-scrolling: touch; }
+.formList .list li { height: .35rem; margin: .3rem 0; padding:.35rem 0 .35rem .95rem; background: #FFF url('../img/slideIcon.png') no-repeat 6.5rem .75rem / .18rem .21rem; transition: all .25s 0s ease-out; color: #009996; box-shadow: 0 1px .15rem 1px #ebeae8; border-radius: .1rem; overflow: hidden;}
+.formList .list li h3 { font-size: .28rem; font-weight: bold; }
+.formList .list li a { display: block; font-size: .28rem; margin: .26rem 0; color: #009996;}
+
+/* formDetail */
+
+.formDetail .new-menu { margin-bottom: 0;}
+.formDetail .title{ height: .5rem; margin-bottom: .15rem; padding-left: 1.4rem; background: #ededed; font-size: .24rem; color: #5d5d5d; line-height: .5rem; }
+.formDetail .textCont { width: 100%; margin: 0 auto; border-radius:.1rem; overflow: auto; -webkit-overflow-scrolling: touch; }
+.formDetail .textCont li { position: relative; width: 90%; /*height: .24rem; */padding: 5% 2.5%; margin: .35rem auto; overflow: hidden; background-color: #FFF; border-radius:.1rem; box-shadow: 2px 0 15px #e8e7e6;}
+.formDetail .textCont li:first-child { margin-top: 0;}
+.formDetail .textCont div { position: relative; font-size: .22rem; margin: .3rem 0; color: #484848;}
+.formDetail .textCont div span { display: inline-block; min-width: 1.2rem; font-size: .22rem; color: #484848;}
+.formDetail .textCont div p { display: inline-block; margin: 0 .15rem 0 0;}
+.formDetail .textCont li h2 { margin-top:-.025rem; font-size: .28rem; color: #009996; font-weight: bold; }
+.formDetail .textCont li h2 i { margin-right: .3rem;}
+.formDetail .textCont li:nth-child(1) h2 i img{ width: .27rem; height: .27rem; vertical-align:-2px; }
+.formDetail .textCont li:nth-child(2) h2 i img{ width: .33rem; height: .24rem; vertical-align:-1px;}
+.formDetail .textCont li:nth-child(3) h2 i img{ width: .23rem; height: .32rem; vertical-align:-2px;}
+.formDetail .textCont li:nth-child(4) h2 i img{ width: .26rem; height: .28rem; vertical-align:-2px;}
+.formDetail .textCont li:nth-child(5) h2 i img{ width: .26rem; height: .31rem; vertical-align:-2px;}
+.formDetail .textCont li h2 span { position: relative; min-width: initial; font-size: .22rem; font-weight: normal; color: #484848;}
+
+/* representative */
+.cover { display: none; position: absolute; left:0; top:20%; bottom: 0; width: 100%; height: 80%; background: rgba(0, 0, 0, 0.3); z-index: 997;}
+.representative .new-menu { box-shadow: initial; margin-bottom: .1rem;}
+.menuCont { position: relative; background-color: #FFF; z-index: 998; }
+.searchCont { width: 5.67rem;height: 0.53rem; margin: 0 auto; background: #fafafa url('../img/serachIcon.png') no-repeat .3rem .13rem / .26rem .26rem;box-shadow: inset 0.028rem 0.028rem 0.1rem 0rem 	rgba(35, 24, 21, 0.3);border-radius: 0.1rem;border: solid 0.01rem rgba(0, 153, 150, 0.6);}
+.searchCont #myform { width: 100%; height: 100%;}
+.searchCont input {float: left; width: 100%; height: 100%; padding-left: .8rem; background-color: transparent; font-size: .28rem;}
+.screening { margin-top: .15rem; padding: 0 2.5%; background-color: #FFF; }
+.screening h2 { display: flex; justify-content: center; align-items: center; width: 100%; border-top: 1px solid #8e8e8e; border-bottom: 1px solid #c1c1c1; line-height: .63rem; }
+.screening h2 span { position: relative; width: 1.88rem; height: .63rem; text-align: center; font-size: .24rem; color: #5d5d5d;}
+.screening h2 span.active { color: #3289c5;}
+.screening h2 span:before { position: absolute; left: 0; top: 0; content: "|"; color: #c1c1c1;}
+.screening h2 span:last-child:after { position: absolute; right: 0; top: 0; content: "|"; color: #c1c1c1; }
+.screening h2 span i { position: absolute; right: .45rem; top: 50%; width:0; height:0; transform: translate(0,-50%) ; border-width: .1rem .1rem 0; border-style:solid; border-color:#555555 transparent transparent; }
+.screening h2 span i.active { transform: translate(0,-50%) scale(-1); }
+.slidCont { display: none;}
+.slidCont li { display: flex; justify-content: space-between; align-items: center; padding: 0 10%;  height: .59rem; border-bottom: 1px solid #c1c1c1; font-size: 0; line-height: .59rem;}
+.slidCont li span { font-size: .24rem; color: #5d5d5d;}
+.slidCont li i { display: none; width: .3rem; height: .18rem; background: url('../img/icon-active.png') no-repeat 0 0 / cover; }
+.slidCont li.active span{ color: #3289c5; }
+.slidCont li.active i{ display: inline-block; color: #3289c5; }
+
+.list-cont { position: absolute; left: 0; top: 0; width: 98%; padding: 0 1%; height: 5rem; margin-top: .5rem; overflow: auto; -webkit-overflow-scrolling: touch;}
+.list-cont li { margin:.25rem 0; padding: .15rem 0; background-color: #ffffff; box-shadow: 0rem 0.03rem 0.21rem 0rem  rgba(55, 45, 33, 0.2); border-radius: 0.07rem; border: solid 0.01rem rgba(55, 45, 33, 0.1);}
+.list-cont li:first-child{ margin-top: 0;}
+.list-cont li a { position: relative; display: block; height: 100%; padding: 0 .9rem; color: #009996; font-size: .22rem;}
+.list-cont li a h3 { font-size: .28rem; font-weight: bold;}
+.list-cont li a i { position: absolute; right: .93rem; bottom: 0;}
+.footer {width:100%; height:.5rem; background-color:#dedede; text-align:center; color:#009996; font-size:.28rem; line-height:.5rem;}
+/*20171129 17:16 form*/
+.form .content .textCont div>section { padding-left:.8rem; margin-top:.24rem; color:red;}
+.form .content .textCont div>section>label { color:red;  margin: 0 .5rem;}
+.form .content .formCont div>section { padding-left:1.3rem; margin-top:.24rem; color:red;}
+.form .content .formCont div>section>label { color:red;  margin: 0 .5rem;}
+.form .content .textCont div .webuploader-pick { margin-top:0; color:#FFF;}
+.form .content .textCont div.smoking label:nth-of-type(3) { display: block; padding-left: 1.1rem; color: red; margin: .3rem 0 0;}
+.form .content .textCont div.Drug label:nth-of-type(5) { display: block; padding-left: 1.4rem; color: red; margin: .3rem 0 0;}
+
+
+.form .content .textCont div>span>section>label{ color:red;}
+
+#formDate,#SISamplingTime,#SISendingTime { background-color:#fff;}
+.jzs input{  display:none;}
+.smoking1+div { display:none;}
+.wrap .smoking2+div{ display:none; padding-left:.7rem;}
+.surgery+div { display:none;}
+.form .content .textCont li label .medicaList p span {display:inline-block; min-width:1.4rem;}
+.form .content .textCont li label b { display:none;}
+.form .content .textCont li label b section {padding-left:.7rem; margin-top:-.15rem;}
+.form .content .textCont li label b .error { color:red;}
+.form .content .textCont li:nth-child(4) .medicaList .error { color:red;  }
+.dynamicList label input[type='text'] { display: none;}
